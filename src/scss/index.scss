@@ -1,0 +1,140 @@
+@import '_reset';
+@import 'bootstrap';
+
+/*=====================================*/
+$gray:#F5F7F8;
+@mixin ab-center{
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%)
+}
+@mixin fz($size){
+	font-size: $size + px;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	font-family:'微軟正黑體';
+}
+.bg-user{
+	background-color: #757576;
+	color:#fff;
+	a{
+		color:#fff;
+	}
+}
+.navbar-brand{
+	@include media-breakpoint-up(xs) {
+		img{
+			height: 3rem;
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		img{
+			height: 2rem;
+		}
+	}
+}
+.navbar-box{
+	&.navbar-collapse{
+		flex-basis: 0;
+	}
+}
+.notice{
+	background-color: $gray;
+	.icon-notice{
+		width: 28px;
+		height: 28px;
+		background-image: url('../images/icon-notice.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 20px;
+	}
+	.marquee{
+		@include fz(14);
+		line-height: 28px;
+	}
+}
+.img-ad{
+	background-color: #C20E19;
+	.bg-ad-box{
+		position: relative;
+		.bg-word{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform:translateX(-50%);
+		}
+	}
+}
+.hot-game{
+	background-color: #ECEFF2;
+	.icon-game{
+		width: 21px;
+	}
+	.hot-game-title{
+		font-weight: 900;
+	}
+}
+.game-list{
+	background-color: #fff;
+	.gamelist-border{
+		border-color:#ECEFF2 !important;
+		a{
+			text-decoration: none;
+			@include media-breakpoint-up(xs) {
+				.img-responsive{
+					height: 3rem;
+				}
+			}
+			@include media-breakpoint-down(xs) {
+				.img-responsive{
+					height: 2rem;
+				}
+			}
+		}
+	}
+	.game-list-title{
+		color:rgb(64, 67, 73);
+		font-weight: 900;
+	}
+}
+.carousel-box{
+	.carousel-indicators{
+		justify-content: flex-end;
+		li{
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	}
+}
+.service-box{
+	background-color: #fff;
+	border-top:1px solid #dedede;
+	.service-list{
+		text-decoration: none;
+		color:#5e5e5e;
+		flex-grow: 1;
+		img{
+			width: 30px;
+		}
+		.title{
+			@include fz(12);
+		}
+	}
+}
+.copy-right{
+	@include fz(14);
+	img{
+		width: 28px;
+	}
+	a{
+		text-decoration: none;
+		color:#5e5e5e;
+	}
+}
