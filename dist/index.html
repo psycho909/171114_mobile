@@ -6,31 +6,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.scrollbar.css">
 	<link rel="stylesheet" href="css/index.css">
 </head>
 
 <body style="background:#ECEFF2;">
-	<nav class="navbar navbar-expand-sm bg-user fixed-top">
-		<a class="navbar-brand" href="#">
-			<img src="images/logo.png" alt="">
-		</a>
-		<div class="navbar-box flex-row d-flex collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav flex-row  ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link px-1" href="#">登录</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link px-1" href="#">注册</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link px-1" href="#">试玩</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-
-	<div class="scrollbar" style="margin-top:71px;margin-bottom:58.78px" >
-		<section class="notice">
+	<div class="wrapper scrollbar-macosx">
+		<nav class="navbar navbar-expand-sm bg-user fixed-top">
+			<a class="navbar-brand" href="#">
+				<img src="images/logo.png" alt="">
+			</a>
+			<div class="navbar-box flex-row d-flex collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav flex-row  ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link px-1" href="#">登录</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-1" href="#">注册</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link px-1" href="#">试玩</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<section class="notice" style="margin-top:71px;">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-2">
@@ -171,64 +172,80 @@
 						</ol>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<a href="javascript:;"><img class="d-block w-100" src="images/01.jpg" alt="First slide"></a>
+								<a href="javascript:;">
+									<img class="d-block w-100" src="images/01.jpg" alt="First slide">
+								</a>
 							</div>
 							<div class="carousel-item">
-								<a href="javascript:;"><img class="d-block w-100" src="images/02.jpg" alt="Second slide"></a>
+								<a href="javascript:;">
+									<img class="d-block w-100" src="images/02.jpg" alt="Second slide">
+								</a>
 							</div>
 							<div class="carousel-item">
-								<a href="javascript:;"><img class="d-block w-100" src="images/03.jpg" alt="Second slide"></a>
+								<a href="javascript:;">
+									<img class="d-block w-100" src="images/03.jpg" alt="Second slide">
+								</a>
 							</div>
 							<div class="carousel-item">
-								<a href="javascript:;"><img class="d-block w-100" src="images/04.jpg" alt="Second slide"></a>
+								<a href="javascript:;">
+									<img class="d-block w-100" src="images/04.jpg" alt="Second slide">
+								</a>
 							</div>
 							<div class="carousel-item">
-								<a href="javascript:;"><img class="d-block w-100" src="images/05.jpg" alt="Second slide"></a>
+								<a href="javascript:;">
+									<img class="d-block w-100" src="images/05.jpg" alt="Second slide">
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="copy-right py-5 text-center" style="">
+		<section class="copy-right py-5 text-center" style="margin-bottom:58.78px">
 			<div>
 				<img src="images/icon-computer.png" alt="" class="copy-right-icon mr-2">
 				<a href="javascript:;">电脑板</a>
 			</div>
 			<div>COPYRIGHT © 9号赌城 RESERVED</div>
 		</section>
+		<!-- service -->
+		<section class="d-flex  w-100 service-box fixed-bottom">
+			<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
+				<img src="images/icon-coin.png" alt="" class="img-fluid">
+				<span class="title">资金管理</span>
+			</a>
+			<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
+				<img src="images/icon-record.png" alt="" class="img-fluid">
+				<span class="title">投注记录</span>
+			</a>
+			<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
+				<img src="images/icon-service.png" alt="" class="img-fluid">
+				<span class="title">客服</span>
+			</a>
+			<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
+				<img src="images/icon-transfer.png" alt="" class="img-fluid">
+				<span class="title">转账</span>
+			</a>
+			<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
+				<img src="images/icon-gift.png" alt="" class="img-fluid">
+				<span class="title">优惠活动</span>
+			</a>
+		</section>
 	</div>
-
-	<!-- service -->
-	<section class="d-flex  w-100 service-box fixed-bottom">
-		<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
-			<img src="images/icon-coin.png" alt="" class="img-fluid">
-			<span class="title">资金管理</span>
-		</a>
-		<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
-			<img src="images/icon-record.png" alt="" class="img-fluid">
-			<span class="title">投注记录</span>
-		</a>
-		<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
-			<img src="images/icon-service.png" alt="" class="img-fluid">
-			<span class="title">客服</span>
-		</a>
-		<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
-			<img src="images/icon-transfer.png" alt="" class="img-fluid">
-			<span class="title">转账</span>
-		</a>
-		<a href="javascript:;" class="service-list px-1 py-2 w-20 d-flex flex-column justify-content-center align-items-center">
-			<img src="images/icon-gift.png" alt="" class="img-fluid">
-			<span class="title">优惠活动</span>
-		</a>
-	</section>
 
 	<script src="js/lib/jquery-3.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-	crossorigin="anonymous"></script>
+	    crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-	crossorigin="anonymous"></script>
+	    crossorigin="anonymous"></script>
+	<script src="js/jquery.scrollbar.js"></script>
 	<script src="js/app.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			window.prettyPrint && prettyPrint();
+			$('.wrapper').scrollbar();
+		});
+	</script>
 </body>
 
 </html>
