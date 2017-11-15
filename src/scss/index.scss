@@ -61,10 +61,14 @@ html,body{
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 20px;
+		margin-top: 2.5px;
 	}
 	.marquee{
 		@include fz(14);
-		line-height: 28px;
+		padding-top: 6px;
+		.marquee-text{
+
+		}
 	}
 }
 .img-ad{
