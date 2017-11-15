@@ -44,6 +44,16 @@ html,body{
 }
 .notice{
 	background-color: $gray;
+	@include media-breakpoint-up(xs) {
+		&{
+			margin-top: 74px;
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		&{
+			margin-top: 60px;
+		}
+	}
 	.icon-notice{
 		width: 28px;
 		height: 28px;
