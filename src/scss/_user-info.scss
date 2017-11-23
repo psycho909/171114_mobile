@@ -47,11 +47,13 @@
         left: 50%;
         transform:translate(-50%,-50%);
         border:none;
+        opacity: 0;
         &.show {
+            opacity: 1;
             animation: superScaleIn .3s both ease-in-out;
         }
         .card-head{
-            border-bottom:1px solid #eee;
+            border-bottom:1px solid lighten(#000000, 75%);
             position: relative;
             .close{
                 position: absolute;
@@ -69,7 +71,11 @@
                 z-index: 0;
             }
             .btn:first-child{
-                border-right: 1px solid lighten(#000000, 75%);
+                border-right: 2px solid lighten(#000000, 75%);
+            }
+            .btn:focus,
+            .btn:hover{
+                z-index: 0;
             }
             .btn-cancel {
                 padding: .8rem 1rem;
@@ -93,7 +99,10 @@
         }
     }
 }
-
+.get-verifi-code{
+    display: block;
+    padding: 12px;
+}
 @keyframes superScaleIn {
     from {
         transform: translate(-50%, -50%) scale(1.2);

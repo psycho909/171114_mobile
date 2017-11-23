@@ -173,7 +173,10 @@
         }
     }
 }
-
+.get-verifi-code{
+    display: block;
+    padding: 12px;
+}
 .deposit-info-box{
     &.show {
         animation: superScaleIn .3s both ease-in-out;
