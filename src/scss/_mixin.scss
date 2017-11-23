@@ -38,6 +38,9 @@
     display: inline-block;
 }
 $blue9:#33A1FF;
+$red9:#EF6B73;
+$gray9:lighten(#000000, 75%);
+$dark-gray9:lighten(#000000, 25%);
 .col-44 {
 	width: calc(100% / 3);
 	flex: 0 0 (100% / 3);
@@ -63,4 +66,10 @@ $blue9:#33A1FF;
 }
 .w-80{
     width: 80%;
+}
+.w-90{
+    width: 90%;
+}
+.relative{
+    position: relative;
 }

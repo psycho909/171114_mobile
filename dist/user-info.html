@@ -43,7 +43,7 @@
 				</div>
 			</li>
 			<li class="list-group-item p-0">
-				<div class="user-list-info d-flex px-3 py-4">
+				<div data-modal="#birthdayModal" class="user-list-info d-flex px-3 py-4">
 					<span>生日:</span>
 					<span class="birthday ml-auto">填写生日</a>
 				</div>
@@ -76,6 +76,23 @@
 			</li>
 		</ul>
 	</section>
+	<div id="birthdayModal" class="mask">
+		<div class="w-80 card-modal show card">
+			<div class="card-head p-3">
+				<div class="text-center">填写生日</div>
+				<button type="button" class="close" data-close="#birthdayModal">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="card-body p-3">
+				<input id="birthday" name="birthday" type="date" value="" class="form-control mt-1" placeholder="">
+			</div>
+			<div class="modal-btn btn-group">
+				<button class="btn btn-cancel" data-close="#birthdayModal">取消</button>
+				<button class="btn btn-success" data-submit="#birthdayModal">确定</button>
+			</div>
+		</div>
+	</div>
 	<div id="nameModal" class="mask">
 		<div class="w-80 card-modal show card">
 			<div class="card-head p-3">
@@ -86,7 +103,7 @@
 			</div>
 			<div class="card-body p-3">
 				<div>请务必填写真实姓名 (<span class="text-tomato">填写后不可修改</span>) </div>
-				<input type="date" value="" class="form-control mt-1" placeholder="真实姓名">
+				<input type="text" value="" class="form-control mt-1" placeholder="">
 			</div>
 			<div class="modal-btn btn-group">
 				<button class="btn btn-cancel" data-close="#nameModal">取消</button>
@@ -181,13 +198,24 @@
 		})
 		$('[data-close]').on('click',function(){
 			var _data=$(this).data('close');
-			console.log(_data)
 			$(this).closest('.card-modal').removeClass('show')
 			$(this).closest(_data).animate({
 				opacity:0
 			},200,function(){
 				$(this).removeClass('show')
 			})
+		})
+		$('[data-submit]').on('click',function(){
+			var _data=$(this).data('submit');
+			var data_val=$(_data).find('.card-body input').val()
+			$(this).closest('.card-modal').removeClass('show')
+			$(this).closest(_data).animate({
+				opacity:0
+			},200,function(){
+				$(this).removeClass('show')
+			})
+			$('.list-group-item').find('.birthday').text(data_val)
+
 		})
 	</script>
 </body>

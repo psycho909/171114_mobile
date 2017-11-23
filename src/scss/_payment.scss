@@ -27,8 +27,10 @@
     border-top: 1px solid darken(#ECEFF2, 10%);
     .pay-box {
         cursor: pointer;
-        img {}
         .pay-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             color: lighten(#000, 40%);
             .title {
                 font-size: 1.4rem;

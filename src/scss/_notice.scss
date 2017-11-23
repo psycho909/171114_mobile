@@ -1,0 +1,47 @@
+@import '_mixin';
+.notice-nav-wrap{
+    border-bottom: 1px solid $gray9;
+    .notice-nav{
+        a{
+            color:$dark-gray9;
+            font-weight: 700;
+            position: relative;
+            &.active{
+                color:$red9;
+                &:before{
+                    content:'';
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    background-color: $red9;
+                }
+            }
+        }
+    }
+}
+.notice-box{
+    .notice-content{
+        border-bottom:1px solid $gray9;
+        a{
+            display: block;
+            color:$dark-gray9;
+            text-decoration: none;
+            font-size: .9rem;
+            
+        }
+    }
+}
+.notice-mail-box{
+    .notice-mail-content{
+        border-bottom:1px solid $gray9;
+        a{
+            display: block;
+            color:$dark-gray9;
+            text-decoration: none;
+            font-size: .9rem;
+            
+        }
+    }
+}
