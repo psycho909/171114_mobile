@@ -29,7 +29,7 @@ gulp.task('server', ['sass'], function() {
 });
 
 gulp.task('watch',function(){
-	gulp.watch('./src/scss/*.scss',['sass']);
+	gulp.watch('./src/scss/**/*.scss',['sass']);
 	//gulp.watch('./src/js/*.js',['build']);
 	gulp.watch('./src/js/*.js',['browserify']);
 	// gulp.watch('./src/js/*.html',['browserify']);
@@ -38,7 +38,7 @@ gulp.task('watch',function(){
 })
 
 gulp.task('sass',function(){
-	gulp.src('./src/scss/*.scss')
+	gulp.src('./src/scss/**/*.scss')
 	.pipe(sass({
 		outputStyle:'compressed',
 		includePaths: ['./node_modules/bootstrap/scss']

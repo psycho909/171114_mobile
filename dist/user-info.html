@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>个人资料</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+	    crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="css/rendezvous.css"> -->
+</head>
+
+<body style="background:#ECEFF2;">
+	<section class="header w-100 py-2 px-3">
+		<div class="d-flex justify-content-between align-items-center">
+			<a href="center.html"><i class="fa fa-angle-left fa-2x text-tomato back" aria-hidden="true"></i></a>
+			<div class="member-title text-black">个人资料</div>
+			<div class=""></div>
+		</div>
+	</section>
+	<section class="user-content-wrap w-100 p-3 mb-3">
+		<div class="d-flex flex-column user-content">
+			<div class="mb-3">国别:
+				<span class="user-country">中国</span>
+			</div>
+			<div class="mb-3">币国:
+				<span class="user-currency">RMB</span>
+			</div>
+			<div class="mb-3">会员等级:
+				<span class="user-membership-lv">普通会员</span>
+			</div>
+		</div>
+	</section>
+	<section class="user-info-list">
+		<ul class="list-group">
+			<li class="list-group-item p-0">
+				<div class="user-list-info d-flex px-3 py-4">
+					<span>帐号:</span>
+					<span class="account ml-auto">testaa</span>
+				</div>
+			</li>
+			<li class="list-group-item p-0">
+				<div class="user-list-info d-flex px-3 py-4">
+					<span>生日:</span>
+					<span class="birthday ml-auto">填写生日</a>
+				</div>
+			</li>
+			<li class="list-group-item p-0">
+				<div class="user-list-info d-flex px-3 py-4">
+					<span>真实姓名:</span>
+					<span class="name ml-auto">添加</span>
+				</div>
+			</li>
+			<li class="list-group-item p-0">
+				<div class="user-list-info d-flex px-3 py-4">
+					<span>昵称:</span>
+					<span class="nickname ml-auto">testaa
+						<i class="ml-2 fa fa-pencil" aria-hidden="true"></i>
+					</span>
+				</div>
+			</li>
+			<li class="list-group-item p-0">
+				<div class="user-list-info d-flex px-3 py-4">
+					<span>手机号码:</span>
+					<span class="phone ml-auto">添加</span>
+				</div>
+			</li>
+			<li class="list-group-item p-0">
+				<div class="user-list-info d-flex px-3 py-4">
+					<span>邮箱:</span>
+					<span class="mail ml-auto">绑定邮箱</span>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<div id="emailModal" class="mask show email-modal">
+		<div class="w-80 card-modal card show">
+			<div class="card-head p-3">
+				<div class="text-center">订单详情</div>
+				<button type="button" class="close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="card-body p-2">
+				<div class="mt-1">支付平台:
+					<span class="payment-plat">智付QQ</span>
+				</div>
+				<div class="mt-1">姓名:
+					<span class="payment-name">QQ支付</span>
+				</div>
+			</div>
+			<div class="modal-btn btn-group">
+				<button class="btn btn-cancel">取消</button>
+				<button class="btn btn-success">确定</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/lib/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	    crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+	    crossorigin="anonymous"></script>
+	<!-- <script src="js/rendezvous.js"></script> -->
+	<script src="js/app.js"></script>
+	<script>
+		$('.trans-btn-group .btn').on('click', function () {
+			$(this).addClass('active').siblings().removeClass('active')
+			var _index = $(this).index()
+			$('.trans-wrap-box').eq(_index).addClass('active').siblings().removeClass('active')
+		})
+		var showOrderModal = function () {
+			$('.order-info-box').addClass('show');
+			$('.order-info-modal').animate({
+				opacity: 1
+			}, 200, function () {
+				$(this).addClass('show')
+			})
+		}
+		$('.order-info-close').on('click', function () {
+			$('.order-info-box').removeClass('show')
+			$('.order-info-modal').animate({
+				opacity: 0
+			}, 300, function () {
+				$(this).removeClass('show');
+			})
+		})
+		var showDeositModal = function () {
+			$('.deposit-info-box').addClass('show');
+			$('.deposit-info-modal').animate({
+				opacity: 1
+			}, 200, function () {
+				$(this).addClass('show')
+			})
+		}
+		$('.deposit-info-btn-close').on('click', function () {
+			$('.deposit-info-box').removeClass('show')
+			$('.deposit-info-modal').animate({
+				opacity: 0
+			}, 300, function () {
+				$(this).removeClass('show');
+			})
+		})
+		$('.user-info-btn').on('click', function () {
+			$('.user-modal-box').addClass('show')
+			$('.user-info-modal').animate({
+				opacity: 1
+			}, 300, function () {
+				$(this).addClass('show');
+			})
+		})
+		$('.btn-cancel').on('click', function () {
+			$('.user-modal-box').removeClass('show')
+			$('.user-info-modal').animate({
+				opacity: 0
+			}, 300, function () {
+				$(this).removeClass('show');
+			})
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+@import '_mixin';
+// member
+.member-title {
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.header {
+    background-color: #F8F8F8;
+    border-bottom: 1px solid #bebebe;
+}
+
+.loginout {
+    font-weight: 900;
+    cursor: pointer;
+}
+.back{
+    cursor: pointer;
+}
+.member-info {
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: .9rem;
+    font-weight: 500;
+    @include media-breakpoint-up(xs) {
+        background: -webkit-linear-gradient(-45deg, rgba(204, 182, 194, 1) 0%, rgba(143, 99, 68, 1) 33%, rgba(82, 33, 19, 1) 93%, rgba(82, 33, 19, 1) 100%);
+        height: 146px;
+    }
+    @include media-breakpoint-down(xs) {
+        background-image: url('../images/member/top-info-bg.jpg');
+        height: 126px;
+    }
+    .avatar {
+        img {
+            width: 5rem;
+        }
+    }
+    .wallet {
+        img,span{
+            vertical-align: middle;
+        }
+        img {
+            width: 1.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.user-function {
+    background-color: #fff;
+    .user-border {
+        border: 1px solid darken(#ECEFF2, 10%);
+        border-bottom: none;
+        &:nth-child(odd) {
+            border-left: none;
+            border-right: none;
+        }
+        &:nth-child(even) {
+            border-right: none;
+        }
+        &:nth-child(9),
+        &:nth-child(10) {
+            border-bottom: 1px solid darken(#ECEFF2, 10%);
+        }
+    }
+    .user-box {
+        position: relative;
+        text-decoration: none;
+        img {
+            width: 2.6rem;
+        }
+        img,span{
+            vertical-align: middle;
+        }
+        &.message:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            top: 26px;
+            left: 56px;
+            background-color: red;
+            @include media-breakpoint-down(xs){
+                top: 22px;
+                left: 50px;
+            }
+        }
+    }
+}
