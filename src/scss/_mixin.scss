@@ -103,6 +103,9 @@ $dark-gray9:lighten(#000000, 25%);
 .fz-5{
     font-size: 1rem * 3 !important;
 }
+.fa{
+    vertical-align: middle;
+}
 @keyframes superScaleIn {
     from {
         transform: translate(-50%, -50%) scale(1.2);

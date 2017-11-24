@@ -8,6 +8,8 @@
 @import '_notice';
 @import '_bank';
 @import '_lottery-history';
+@import '_profit';
+@import '_game-records';
 /*=====================================*/
 
 $gray:#F5F7F8;
@@ -76,12 +78,6 @@ body {
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 20px;
-		margin-top: 2.5px;
-	}
-	.marquee {
-		@include fz(14);
-		padding-top: 6px;
-		.marquee-text {}
 	}
 }
 
@@ -106,13 +102,70 @@ body {
 	}
 	.hot-game-title {
 		font-weight: 900;
+		img,span{
+			vertical-align: middle;
+		}
 	}
 }
-
+.news-wrap{
+	.fa{
+		color:#D70002;
+	}
+	span{
+		font-weight: 900;
+	}
+	.more{
+		padding: .4rem 1.25rem;
+		color:#fff;
+		background-color: #D70002;
+		border-radius: 8px;
+	}
+	.news-title{
+		border:1px solid #ddd;
+		border-bottom:2px solid #D70002;
+		border-radius: 8px 8px 0 0;
+		background-color: #fff;
+	}
+	.news-content{
+		border:1px solid #ddd;
+		border-radius: 0px 0px 8px 8px;
+		background-color: #fff;
+		a{
+			color:#003366;
+			text-decoration: none;
+			font-size: .8rem;
+			position: relative;
+			&:before{
+				content:'';
+				width: 6px;
+				height: 6px;
+				background-color: #ccc;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
 .game-list {
 	background-color: #fff;
 	.gamelist-border {
-		border-color: #ECEFF2 !important;
+		border:1px solid rgb(226, 226, 226);
+		border-right:none;
+		border-bottom:none;
+		&:nth-last-child(1){
+			border-bottom:1px solid rgb(226, 226, 226);
+		}
+		&:nth-last-child(2){
+			border-bottom:1px solid rgb(226, 226, 226);
+		}
+		&:nth-last-child(3){
+			border-bottom:1px solid rgb(226, 226, 226);
+		}
+		&:nth-child(3n+1){
+			border-left:none;
+		}
 		a {
 			text-decoration: none;
 			@include media-breakpoint-up(xs) {

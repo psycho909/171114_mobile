@@ -1,0 +1,19 @@
+@import '_mixin';
+.game-records-table{
+    thead{
+        background-color: #ddd;
+        font-weight: 700;
+        font-size: .9rem;
+        text-align: center;
+    }
+    tbody{
+        font-size: .9rem;
+        text-align: center;
+        tr{
+            background-color: #fff;
+            &:nth-child(even){
+                background-color: darken(#fff,10%);
+            }
+        }
+    }
+}
