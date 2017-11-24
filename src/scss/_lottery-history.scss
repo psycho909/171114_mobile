@@ -1,0 +1,89 @@
+@import '_mixin';
+.lottery-nav{
+    .nav{
+        a{
+            color:$dark-gray9;
+            border:1px solid $gray9;
+            border-left:none;
+            border-bottom:none;
+            background-color: #fff;
+            &:nth-last-child(1){
+                border-bottom:1px solid $gray9;
+            }
+            &:nth-last-child(2){
+                border-bottom:1px solid $gray9;
+            }
+            &:nth-last-child(3){
+                border-bottom:1px solid $gray9;
+            }
+            &.active{
+                color:$red9;
+                border:1px solid $red9;
+                overflow: hidden;
+                position: relative;
+                &:before{
+                    content:'';
+                    width: 60px;
+                    height: 22px;
+                    position: absolute;
+                    top: -9px;
+                    left: -15px;
+                    background-color: $red9;
+                    transform: rotate(-36deg);
+                }
+                &:after{
+                    content:'';
+                    width: 14px;
+                    height: 8px;
+                    position: absolute;
+                    top: 2px;
+                    left: 4px;
+                    border-left:3px solid #fff;
+                    border-bottom:3px solid #fff;
+                    background-color: transparent;
+                    transform: rotate(-43deg);
+                }
+            }
+        }
+    }
+}
+.lottery-history-wrap{
+    .row{
+        border-bottom:1px solid #a7a7a7;
+        .arrow{
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-color: #a7a7a7;
+            &:before{
+                content:'';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-top:1px solid #a7a7a7;
+                border-right:1px solid #a7a7a7;
+                transform: translateY(-50%) rotate(45deg);
+                top: 50%;
+                left: -4px;
+            }
+        }
+    }
+    .row:nth-child(odd){
+        background-color: #fff;
+        .arrow{
+            &:before{
+                background-color: #fff;
+            }
+        }
+    }
+    .row:nth-child(even){
+        background-color: rgb(240, 240, 240);
+        .arrow{
+            &:before{
+                background-color: rgb(240, 240, 240);
+            }
+        }
+    }
+}
