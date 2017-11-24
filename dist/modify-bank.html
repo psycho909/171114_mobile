@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>银行信息</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body style="background:#ECEFF2;">
+	<section class="header w-100 py-2 px-3 mb-3">
+		<div class="d-flex justify-content-between align-items-center">
+			<a href="bank.html">
+				<i class="fa fa-angle-left fa-2x text-tomato back" aria-hidden="true"></i>
+			</a>
+			<div class="member-title text-black">银行信息</div>
+			<div class=""></div>
+			</a>
+		</div>
+	</section>
+
+	<section class="bank-card-wrap">
+		<div class="w-90 d-flex flex-column mx-auto">
+			<div class="form-row mb-2">
+				<select name="" id="" class="form-control mb-2">
+					<option selected value="选择银行">选择银行</option>
+					<option value="...">...</option>
+				</select>
+				<select name="" id="" class="form-control mb-2">
+					<option selected value="所属省份">所属省份</option>
+					<option value="...">...</option>
+				</select>
+				<select name="" id="" class="form-control mb-2">
+					<option selected value="所属城市">所属城市</option>
+					<option value="...">...</option>
+				</select>
+				<input type="text" class="form-control mb-2" placeholder="开户网点">
+				<input type="text" class="form-control mb-2" placeholder="开户帐号">
+				<input type="text" class="form-control mb-2" placeholder="开户姓名">
+			</div>
+			<button class="btn btn-block text-white btn-blue p-2 fz-425">确定</button>
+		</div>
+	</section>
+	<div id="user-complete-info" class="mask show">
+		<div class="w-80 card-modal show card">
+			<div class="card-head p-3">
+				<div class="text-center">完善个人信息</div>
+			</div>
+			<div class="card-body p-3">
+				<div class="form-row">
+					<div class="col-12">
+						<span class="user-modal-notice">请务必填写真实姓名和手机号码(
+							<span class="text-tomato">填写后不可修改</span>)</span>
+					</div>
+					<div class="col-12 mt-2">
+						<input type="text" class="form-control" placeholder="真实姓名">
+					</div>
+					<div class="col-3 mt-2">
+						<select id="inputState" class="form-control">
+							<option selected>86</option>
+						</select>
+					</div>
+					<div class="col-9 mt-2">
+						<input type="text" class="form-control" placeholder="手机号码">
+					</div>
+					<div class="col-8 mt-2">
+						<input type="text" class="form-control" placeholder="验证码">
+					</div>
+					<div class="col-4 mt-2">
+						<a href="javascript:;" class="get-verifi-code">获取验证码</a>
+					</div>
+					<div class="col-12 mt-2">
+						<input type="password" class="form-control" placeholder="取款密码">
+					</div>
+					<div class="col-12 mt-2">
+						<span class="user-modal-notice">4-8位英文与数字组合</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-btn btn-group">
+				<button class="btn btn-cancel" data-close="#user-complete-info">取消</button>
+				<button class="btn btn-success">确定</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/lib/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	    crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+	    crossorigin="anonymous"></script>
+
+	<script src="js/app.js"></script>
+	<script>
+	</script>
+</body>
+
+</html>

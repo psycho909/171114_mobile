@@ -41,16 +41,18 @@
         opacity: 1;
     }
     .card-modal{
-        animation: superScaleOut .3s both ease-in-out;
         position: relative;
         top: 50%;
         left: 50%;
-        transform:translate(-50%,-50%);
+        transform:translate(-50%,-50%) scale(1.2);
         border:none;
         opacity: 0;
+        transition:all .3s;
         &.show {
-            opacity: 1;
             animation: superScaleIn .3s both ease-in-out;
+        }
+        &.hidden{
+            animation: superScaleOut .3s both ease-in-out;
         }
         .card-head{
             border-bottom:1px solid lighten(#000000, 75%);
@@ -102,25 +104,4 @@
 .get-verifi-code{
     display: block;
     padding: 12px;
-}
-@keyframes superScaleIn {
-    from {
-        transform: translate(-50%, -50%) scale(1.2);
-        opacity: 0;
-    }
-    to {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes superScaleOut {
-    from {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-    to {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0;
-    }
 }

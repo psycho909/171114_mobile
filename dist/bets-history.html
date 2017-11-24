@@ -7,10 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>个人资料</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-	    crossorigin="anonymous">
-	<link rel="stylesheet" href="css/index.css">
+		crossorigin="anonymous">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<!-- <link rel="stylesheet" href="css/rendezvous.css"> -->
+	<link rel="stylesheet" href="css/index.css">
+	
 </head>
 
 <body style="background:#ECEFF2;">
@@ -23,7 +23,7 @@
 			<div class=""></div>
 		</div>
 	</section>
-	<section class="bets-history-wrap">
+	<section class="bets-history-wrap" data-scroll="bets-wrap">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-4 p-3 text-center">
@@ -93,38 +93,9 @@
 	    crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
 	    crossorigin="anonymous"></script>
-	<!-- <script src="js/rendezvous.js"></script> -->
 	<script src="js/app.js"></script>
 	<script>
-		$('.user-list-info').on('click', function () {
-			var _data = $(this).data('modal')
-			$(_data).addClass('show').animate({
-				opacity: 1
-			}, 200, function () {
-				$(this).find('.card-modal').addClass('show')
-			})
-		})
-		$('[data-close]').on('click', function () {
-			var _data = $(this).data('close');
-			$(this).closest('.card-modal').removeClass('show')
-			$(this).closest(_data).animate({
-				opacity: 0
-			}, 200, function () {
-				$(this).removeClass('show')
-			})
-		})
-		$('[data-submit]').on('click', function () {
-			var _data = $(this).data('submit');
-			var data_val = $(_data).find('.card-body input').val()
-			$(this).closest('.card-modal').removeClass('show')
-			$(this).closest(_data).animate({
-				opacity: 0
-			}, 200, function () {
-				$(this).removeClass('show')
-			})
-			$('.list-group-item').find('.birthday').text(data_val)
 
-		})
 	</script>
 </body>
 

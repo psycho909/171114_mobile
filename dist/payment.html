@@ -8,8 +8,8 @@
 	<title>第三方支付頁</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
 	crossorigin="anonymous">
-	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/index.css">
 </head>
 
 <body style="background:#ECEFF2;">
@@ -93,7 +93,7 @@
 						<div class="pay-box withdraw-notice-content d-flex flex-column justify-content-center align-items-center my-3">
 							<img src="images/member/payment/responsive-mess.png" alt="" width="80">
 							<div class="notice-title my-2">你还没完善个人信息</div>
-							<button class="btn user-info-btn my-2 btn-lg">完善个人信息</button>
+							<button class="btn user-info-btn my-2 btn-lg" onClick="showModal('#user-complete-info')" data-modal="#user-complete-info">完善个人信息</button>
 						</div>
 					</div>
 				</div>
@@ -111,236 +111,200 @@
 						</div>
 					</div>
 				</div>
-				<div class="trans-wrap-box deposit-wrap active">
-					<div class="row flex-column justify-content-center align-items-center">
-						<div class="col-11 px-0 mb-3">
-							<span class="badge badge-date p-2">2017-11-23</span>
-						</div>
-						<div class="col-11 px-0 mb-3">
-							<div class="card order-card">
-								<div class="card-head px-3 py-2">
-									<div class="order-num-box d-flex">
-										<span>订单号:
-											<span class="order-num">999999</span>
-										</span>
-										<span class="order-time ml-auto">16:42</span>
+				<div class="trans-wrap-boxs" data-scroll="trans-wrap">
+					<div class="trans-wrap-box deposit-wrap active">
+						<div class="row flex-column justify-content-center align-items-center">
+							<div class="col-11 px-0 mb-3">
+								<span class="badge badge-date p-2">2017-11-23</span>
+							</div>
+							<div class="col-11 px-0 mb-3">
+								<div class="card order-card">
+									<div class="card-head px-3 py-2">
+										<div class="order-num-box d-flex">
+											<span>订单号:
+												<span class="order-num">999999</span>
+											</span>
+											<span class="order-time ml-auto">16:42</span>
+										</div>
+									</div>
+									<div class="card-body p-3">
+										<div class="order-info d-flex">
+											<span>存入
+												<span class="wallet-type">QQ钱包</span>
+											</span>
+											<a href="javascript:;" class="ml-auto" data-modal="#order-info">
+												<i class="fa fa-file-o mr-1" aria-hidden="true"></i>订单详情</a>
+										</div>
+										<a href="javascript:;" class="order-money-info d-flex mt-2">
+											<span class="order-money">100.00</span>
+											<div class="ml-auto">
+												<i class="fa fa-clock-o mr-1" aria-hidden="true"></i>等待入款</div>
+										</a>
 									</div>
 								</div>
-								<div class="card-body p-3">
-									<div class="order-info d-flex">
-										<span>存入
-											<span class="wallet-type">QQ钱包</span>
-										</span>
-										<a href="javascript:showOrderModal();" class="ml-auto">
-											<i class="fa fa-file-o mr-1" aria-hidden="true"></i>订单详情</a>
+							</div>
+							<div class="col-11 px-0 mb-3">
+								<div class="card order-card">
+									<div class="card-head px-3 py-2">
+										<div class="order-num-box d-flex">
+											<span>订单号:
+												<span class="order-num">999999</span>
+											</span>
+											<span class="order-time ml-auto">16:42</span>
+										</div>
 									</div>
-									<a href="javascript:showDeositModal();" class="order-money-info d-flex mt-2">
-										<span class="order-money">100.00</span>
-										<div class="ml-auto">
-											<i class="fa fa-clock-o mr-1" aria-hidden="true"></i>等待入款</div>
-									</a>
+									<div class="card-body p-3">
+										<div class="order-info d-flex">
+											<span>存入
+												<span class="wallet-type">QQ钱包</span>
+											</span>
+											<a href="javascript:;" class="ml-auto" data-modal="#order-info">
+												<i class="fa fa-file-o mr-1" aria-hidden="true"></i>订单详情</a>
+										</div>
+										<a href="javascript:;" class="order-money-info d-flex mt-2">
+											<span class="order-money">100.00</span>
+											<div class="ml-auto">
+												<i class="fa fa-clock-o mr-1" aria-hidden="true"></i>等待入款</div>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-11 px-0 mb-3">
-							<div class="card order-card">
-								<div class="card-head px-3 py-2">
-									<div class="order-num-box d-flex">
-										<span>订单号:
-											<span class="order-num">999999</span>
-										</span>
-										<span class="order-time ml-auto">16:42</span>
+						<div class="row flex-column justify-content-center align-items-center">
+							<div class="col-11 px-0 mb-3">
+								<span class="badge badge-date p-2">2017-11-22</span>
+							</div>
+							<div class="col-11 px-0 mb-3">
+								<div class="card order-card">
+									<div class="card-head px-3 py-2">
+										<div class="order-num-box d-flex">
+											<span>订单号:
+												<span class="order-num">999999</span>
+											</span>
+											<span class="order-time ml-auto">16:42</span>
+										</div>
+									</div>
+									<div class="card-body p-3">
+										<div class="order-info d-flex">
+											<span>存入
+												<span class="wallet-type">QQ钱包</span>
+											</span>
+										</div>
+										<a href="javascript:;" data-modal="#deposit-info" class="order-money-info d-flex mt-2">
+											<span class="order-money">100.00</span>
+											<div class="ml-auto">
+												<i class="fa fa-clock-o mr-1" aria-hidden="true"></i>入款失败</div>
+										</a>
 									</div>
 								</div>
-								<div class="card-body p-3">
-									<div class="order-info d-flex">
-										<span>存入
-											<span class="wallet-type">QQ钱包</span>
-										</span>
-										<a href="javascript:showOrderModal();" class="ml-auto">
-											<i class="fa fa-file-o mr-1" aria-hidden="true"></i>订单详情</a>
+							</div>
+							<div class="col-11 px-0 mb-3">
+								<div class="card order-card">
+									<div class="card-head px-3 py-2">
+										<div class="order-num-box d-flex">
+											<span>订单号:
+												<span class="order-num">999999</span>
+											</span>
+											<span class="order-time ml-auto">16:42</span>
+										</div>
 									</div>
-									<a href="javascript:;" class="order-money-info d-flex mt-2">
-										<span class="order-money">100.00</span>
-										<div class="ml-auto">
-											<i class="fa fa-clock-o mr-1" aria-hidden="true"></i>等待入款</div>
-									</a>
+									<div class="card-body p-3">
+										<div class="order-info d-flex">
+											<span>存入
+												<span class="wallet-type">QQ钱包</span>
+											</span>
+										</div>
+										<a href="javascript:;" data-modal="#deposit-info" class="order-money-info d-flex mt-2">
+											<span class="order-money">100.00</span>
+											<div class="ml-auto">
+												<i class="fa fa-clock-o mr-1" aria-hidden="true"></i>入款失败</div>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row flex-column justify-content-center align-items-center">
-						<div class="col-11 px-0 mb-3">
-							<span class="badge badge-date p-2">2017-11-22</span>
-						</div>
-						<div class="col-11 px-0 mb-3">
-							<div class="card order-card">
-								<div class="card-head px-3 py-2">
-									<div class="order-num-box d-flex">
-										<span>订单号:
-											<span class="order-num">999999</span>
-										</span>
-										<span class="order-time ml-auto">16:42</span>
-									</div>
-								</div>
-								<div class="card-body p-3">
-									<div class="order-info d-flex">
-										<span>存入
-											<span class="wallet-type">QQ钱包</span>
-										</span>
-									</div>
-									<a href="javascript:showDeositModal();" class="order-money-info d-flex mt-2">
-										<span class="order-money">100.00</span>
-										<div class="ml-auto">
-											<i class="fa fa-clock-o mr-1" aria-hidden="true"></i>入款失败</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-11 px-0 mb-3">
-							<div class="card order-card">
-								<div class="card-head px-3 py-2">
-									<div class="order-num-box d-flex">
-										<span>订单号:
-											<span class="order-num">999999</span>
-										</span>
-										<span class="order-time ml-auto">16:42</span>
-									</div>
-								</div>
-								<div class="card-body p-3">
-									<div class="order-info d-flex">
-										<span>存入
-											<span class="wallet-type">QQ钱包</span>
-										</span>
-									</div>
-									<a href="javascript:showDeositModal();" class="order-money-info d-flex mt-2">
-										<span class="order-money">100.00</span>
-										<div class="ml-auto">
-											<i class="fa fa-clock-o mr-1" aria-hidden="true"></i>入款失败</div>
-									</a>
-								</div>
+					<div class="trans-wrap-box trans-wrap">
+						<div class="row flex-column justify-content-center align-items-center">
+							<div class="col-11 px-0 mb-3">
+								<div class="text-center">转账 暂无数据</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="trans-wrap-box trans-wrap">
-					<div class="row flex-column justify-content-center align-items-center">
-						<div class="col-11 px-0 mb-3">
-							<div class="text-center">转账 暂无数据</div>
-						</div>
-					</div>
-				</div>
-				<div class="trans-wrap-box reward-wrap">
-					<div class="row flex-column justify-content-center align-items-center">
-						<div class="col-11 px-0 mb-3">
-							<div class="text-center">赠金返点 暂无数据</div>
+					<div class="trans-wrap-box reward-wrap">
+						<div class="row flex-column justify-content-center align-items-center">
+							<div class="col-11 px-0 mb-3">
+								<div class="text-center">赠金返点 暂无数据</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</div>
-	<div class="mask user-info-modal">
-		<div class="user-modal-box d-flex flex-column align-items-center">
-			<div class="user-modal-head d-flex justify-content-center p-3">
-				<div class="user-modal-titlep-3">完善个人信息</div>
+	<div id="user-complete-info" class="mask">
+		<div class="w-80 card-modal card">
+			<div class="card-head p-3">
+				<div class="text-center">完善个人信息</div>
 			</div>
-			<div class="user-modal-body form-row p-3">
-				<div class="col-12">
-					<span class="user-modal-notice">请务必填写真实姓名和手机号码(
-						<span class="text-tomato">填写后不可修改</span>)</span>
-				</div>
-				<div class="col-12 mt-2">
-					<input type="text" class="form-control" placeholder="真实姓名">
-				</div>
-				<div class="col-3 mt-2">
-					<select id="inputState" class="form-control">
-						<option selected>86</option>
-					</select>
-				</div>
-				<div class="col-9 mt-2">
-					<input type="text" class="form-control" placeholder="手机号码">
-				</div>
-				<div class="col-8 mt-2">
-					<input type="text" class="form-control" placeholder="验证码">
-				</div>
-				<div class="col-4 mt-2">
-					<a href="javascript:;" class="get-verifi-code">获取验证码</a>
-				</div>
-				<div class="col-12 mt-2">
-					<input type="password" class="form-control" placeholder="取款密码">
-				</div>
-				<div class="col-12 mt-2">
-					<span class="user-modal-notice">4-8位英文与数字组合</span>
+			<div class="card-body p-3">
+				<div class="form-row">
+					<div class="col-12">
+						<span class="user-modal-notice">请务必填写真实姓名和手机号码(
+							<span class="text-tomato">填写后不可修改</span>)</span>
+					</div>
+					<div class="col-12 mt-2">
+						<input type="text" class="form-control" placeholder="真实姓名">
+					</div>
+					<div class="col-3 mt-2">
+						<select id="inputState" class="form-control">
+							<option selected>86</option>
+						</select>
+					</div>
+					<div class="col-9 mt-2">
+						<input type="text" class="form-control" placeholder="手机号码">
+					</div>
+					<div class="col-8 mt-2">
+						<input type="text" class="form-control" placeholder="验证码">
+					</div>
+					<div class="col-4 mt-2">
+						<a href="javascript:;" class="get-verifi-code">获取验证码</a>
+					</div>
+					<div class="col-12 mt-2">
+						<input type="password" class="form-control" placeholder="取款密码">
+					</div>
+					<div class="col-12 mt-2">
+						<span class="user-modal-notice">4-8位英文与数字组合</span>
+					</div>
 				</div>
 			</div>
-			<div class="user-modal-btn btn-group">
-				<button class="btn btn-cancel">取消</button>
+			<div class="modal-btn btn-group">
+				<button class="btn btn-cancel" data-close="#user-complete-info">取消</button>
 				<button class="btn btn-success">确定</button>
 			</div>
 		</div>
 	</div>
-	<div class="mask user-info-modal">
-		<div class="user-modal-box d-flex flex-column align-items-center">
-			<div class="user-modal-head d-flex justify-content-center p-3">
-				<div class="user-modal-titlep-3">完善个人信息</div>
-			</div>
-			<div class="user-modal-body form-row p-3">
-				<div class="col-12">
-					<span class="user-modal-notice">请务必填写真实姓名和手机号码(
-						<span class="text-tomato">填写后不可修改</span>)</span>
-				</div>
-				<div class="col-12 mt-2">
-					<input type="text" class="form-control" placeholder="真实姓名">
-				</div>
-				<div class="col-3 mt-2">
-					<select id="inputState" class="form-control">
-						<option selected>86</option>
-					</select>
-				</div>
-				<div class="col-9 mt-2">
-					<input type="text" class="form-control" placeholder="手机号码">
-				</div>
-				<div class="col-8 mt-2">
-					<input type="text" class="form-control" placeholder="验证码">
-				</div>
-				<div class="col-4 mt-2">
-					<a href="javascript:;" class="get-verifi-code">获取验证码</a>
-				</div>
-				<div class="col-12 mt-2">
-					<input type="password" class="form-control" placeholder="取款密码">
-				</div>
-				<div class="col-12 mt-2">
-					<span class="user-modal-notice">4-8位英文与数字组合</span>
-				</div>
-			</div>
-			<div class="user-modal-btn btn-group">
-				<button class="btn btn-cancel">取消</button>
-				<button class="btn btn-success">确定</button>
-			</div>
-		</div>
-	</div>
-	<div class="mask deposit-info-modal">
-		<div class="deposit-info-box card">
+	<div id="deposit-info" class="mask">
+		<div class="w-60 card-modal  card">
 			<div class="card-body">
 				<div class="text-center">钱没到帐</div>
 			</div>
 			<div class="card-footer p-0">
-				<button class="btn-block btn deposit-info-btn-close">确定</button>
+				<button class="btn-block btn deposit-info-btn-close text-blue" data-close="#deposit-info">确定</button>
 			</div>
 		</div>
 	</div>
-	<div class="mask order-info-modal">
-		<div class="order-info-box card">
-			<div class="card-head p-2">
+	<div id="order-info" class="mask">
+		<div class="w-60 card-modal card">
+			<div class="card-head p-3">
 				<div class="text-center">订单详情</div>
-				<button type="button" class="order-info-close close" aria-label="Close">
+				<button type="button" class="order-info-close close" aria-label="Close" data-close="#order-info">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div class="card-body p-2">
-				<div class="mt-1">支付平台: <span class="payment-plat">智付QQ</span></div>
-				<div class="mt-1">姓名: <span class="payment-name">QQ支付</span></div>
+			<div class="card-body p-3">
+				<div class="mb-3">支付平台: <span class="payment-plat">智付QQ</span></div>
+				<div class="mb-3">姓名: <span class="payment-name">QQ支付</span></div>
 			</div>
 		</div>
 	</div>
@@ -351,59 +315,7 @@
 	    crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
 	<script>
-		$('.trans-btn-group .btn').on('click',function(){
-			$(this).addClass('active').siblings().removeClass('active')
-			var _index=$(this).index()
-			$('.trans-wrap-box').eq(_index).addClass('active').siblings().removeClass('active')
-		})
-		var showOrderModal=function(){
-			$('.order-info-box').addClass('show');
-			$('.order-info-modal').animate({
-				opacity:1
-			},200,function(){
-				$(this).addClass('show')
-			})
-		}
-		$('.order-info-close').on('click',function(){
-			$('.order-info-box').removeClass('show')
-			$('.order-info-modal').animate({
-				opacity: 0
-			}, 300,function(){
-				$(this).removeClass('show');
-			})
-		})
-		var showDeositModal=function(){
-			$('.deposit-info-box').addClass('show');
-			$('.deposit-info-modal').animate({
-				opacity:1
-			},200,function(){
-				$(this).addClass('show')
-			})
-		}
-		$('.deposit-info-btn-close').on('click',function(){
-			$('.deposit-info-box').removeClass('show')
-			$('.deposit-info-modal').animate({
-				opacity: 0
-			}, 300,function(){
-				$(this).removeClass('show');
-			})
-		})
-		$('.user-info-btn').on('click', function () {
-			$('.user-modal-box').addClass('show')
-			$('.user-info-modal').animate({
-				opacity: 1
-			}, 300,function(){
-				$(this).addClass('show');
-			})
-		})
-		$('.btn-cancel').on('click', function () {
-			$('.user-modal-box').removeClass('show')
-			$('.user-info-modal').animate({
-				opacity: 0
-			}, 300,function(){
-				$(this).removeClass('show');
-			})
-		})
+		
 	</script>
 </body>
 

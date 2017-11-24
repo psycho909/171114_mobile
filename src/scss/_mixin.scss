@@ -58,11 +58,23 @@ $dark-gray9:lighten(#000000, 25%);
 .text-tomato {
 	color: #EF6B73;
 }
+.text-blue{
+    color:$blue9;
+}
+.text-red{
+    color:$red9;
+}
 .btn{
     cursor: pointer;
     &:focus{
         box-shadow: 0px 0px 0px transparent !important;
     }
+}
+.btn-blue{
+    background-color: $blue9;
+}
+.w-60{
+    width: 60%;
 }
 .w-80{
     width: 80%;
@@ -72,4 +84,43 @@ $dark-gray9:lighten(#000000, 25%);
 }
 .relative{
     position: relative;
+}
+.fz-1{
+    font-size: 1rem * 0.25 !important;
+}
+.fz-2{
+    font-size: 1rem * 0.5 !important;
+}
+.fz-3{
+    font-size: 1rem !important;
+}
+.fz-425{
+    font-size: 1rem * 1.25 !important;
+}
+.fz-4{
+    font-size: 1rem * 1.5 !important;
+}
+.fz-5{
+    font-size: 1rem * 3 !important;
+}
+@keyframes superScaleIn {
+    from {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes superScaleOut {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+    }
 }

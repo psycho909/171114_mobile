@@ -1,1 +1,17 @@
 @import '_mixin';
+.bank-card-add{
+    &:hover{
+        color:$red9;
+    }
+}
+.bank-card{
+    border:1px dashed $red9;
+    text-decoration: none !important;
+    .card-body{
+        color:$red9;
+        &:hover{
+            color:$red9;
+            
+        }
+    }
+}
