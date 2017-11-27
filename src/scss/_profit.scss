@@ -17,3 +17,64 @@
         }
     }
 }
+.profit-card{
+    box-shadow: 0px 1px 3px rgba(0,0,0,.5);
+    border:none;
+    .card-header{
+        background: -webkit-linear-gradient(left, rgba(74,161,255,1) 0%, rgba(0,123,255,1) 100%);
+        font-size: 1.25rem;
+    }
+    .card-body{
+        .row:nth-child(even){
+            background-color: #ddd;
+            .col-4{
+                &:before{
+                    background-color: darken(#ddd,35%);
+                }
+                &:after{
+                    background-color: #ddd;
+                    border-top-color:darken(#ddd,35%);
+                    border-right-color:darken(#ddd,35%);
+                }
+            }
+        }
+        .row:nth-child(odd){
+            background-color: #fff;
+            .col-4{
+                &:before{
+                    background-color: darken(#fff,15%);
+                }
+                &:after{
+                    background-color: #fff;
+                    border-top-color:darken(#fff,35%);
+                    border-right-color:darken(#fff,35%);
+                }
+            }
+        }
+        .row{
+            .col-4{
+                position: relative;
+                &:before{
+                    content:'';
+                    width: 2px;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                &:after{
+                    content:'';
+                    width: 8px;
+                    height: 8px;
+                    position: absolute;
+                    right: -3px;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                    background-color: #000;
+                    border-top:2px solid #000;
+                    border-right:2px solid #000;
+                }
+            }
+        }
+    }
+}
