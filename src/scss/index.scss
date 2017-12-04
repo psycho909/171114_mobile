@@ -10,6 +10,7 @@
 @import '_lottery-history';
 @import '_profit';
 @import '_game-records';
+@import '_login';
 /*=====================================*/
 
 .col-44 {
@@ -53,6 +54,9 @@
 .w-90{
     width: 90%;
 }
+.w-95{
+    width: 95%;
+}
 .relative{
     position: relative;
 }
@@ -77,6 +81,7 @@
 .fa{
     vertical-align: middle;
 }
+
 @keyframes superScaleIn {
     from {
         transform: translate(-50%, -50%) scale(1.2);
