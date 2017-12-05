@@ -1,4 +1,5 @@
 @import '_mixin';
+// Login
 .account-box{
     background-color: #fff;
     border-radius:12px 12px 0 0;
@@ -66,9 +67,16 @@
         color:$blue9;
     }
 }
-
-.btn-login{
-    font-size: 1.1rem;
+.cllbtn{
+    a.btn-login{
+        &.disable{
+            opacity: .4;
+        }
+        font-size: 1.1rem;
+        opacity: 1;
+        color:#fff;
+        background: $blue9;
+    }
 }
 .login-else-text{
     .col{
